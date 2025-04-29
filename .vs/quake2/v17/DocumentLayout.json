@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\m_boss32.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\m_boss32.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_target.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_target.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_monster.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_monster.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_local.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_local.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\p_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\p_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "m_boss32.c",
+              "DocumentMoniker": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\m_boss32.c",
+              "RelativeDocumentMoniker": "game\\m_boss32.c",
+              "ToolTip": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\m_boss32.c",
+              "RelativeToolTip": "game\\m_boss32.c",
+              "ViewState": "AgIAABYCAAAAAAAAAAAnwCYCAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-04-27T19:51:14.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "g_target.c",
+              "DocumentMoniker": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_target.c",
+              "RelativeDocumentMoniker": "game\\g_target.c",
+              "ToolTip": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_target.c",
+              "RelativeToolTip": "game\\g_target.c",
+              "ViewState": "AgIAAI8BAAAAAAAAAAAAAKoBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-04-27T19:51:10.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "g_monster.c",
+              "DocumentMoniker": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_monster.c",
+              "RelativeDocumentMoniker": "game\\g_monster.c",
+              "ToolTip": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_monster.c",
+              "RelativeToolTip": "game\\g_monster.c",
+              "ViewState": "AgIAACEAAAAAAAAAAAAnwDQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-04-27T19:51:07.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "g_local.h",
+              "DocumentMoniker": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_local.h",
+              "RelativeDocumentMoniker": "game\\g_local.h",
+              "ToolTip": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_local.h",
+              "RelativeToolTip": "game\\g_local.h",
+              "ViewState": "AgIAAMYCAAAAAAAAAAAnwNkCAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-27T19:51:00.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "g_weapon.c",
+              "DocumentMoniker": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_weapon.c",
+              "RelativeDocumentMoniker": "game\\g_weapon.c",
+              "ToolTip": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\g_weapon.c",
+              "RelativeToolTip": "game\\g_weapon.c",
+              "ViewState": "AgIAAIcBAAAAAAAAAAAnwF0BAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-04-27T15:50:23.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "p_weapon.c",
+              "DocumentMoniker": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\p_weapon.c",
+              "RelativeDocumentMoniker": "game\\p_weapon.c",
+              "ToolTip": "C:\\Users\\Legion\\Documents\\School\\GameModDevelopment\\quake2-full\\game\\p_weapon.c",
+              "RelativeToolTip": "game\\p_weapon.c",
+              "ViewState": "AgIAADkDAAAAAAAAAAAnwEcDAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-04-27T15:48:17.234Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
