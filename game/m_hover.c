@@ -618,3 +618,64 @@ void SP_monster_hover (edict_t *self)
 
 	flymonster_start (self);
 }
+
+void SP_friendly_hover(edict_t* self)
+{
+	if (deathmatch->value)
+	{
+		G_FreeEdict(self);
+		return;
+	}
+
+	sound_pain1 = gi.soundindex("hover/hovpain1.wav");
+	sound_pain2 = gi.soundindex("hover/hovpain2.wav");
+	sound_death1 = gi.soundindex("hover/hovdeth1.wav");
+	sound_death2 = gi.soundindex("hover/hovdeth2.wav");
+	sound_sight = gi.soundindex("hover/hovsght1.wav");
+	sound_search1 = gi.soundindex("hover/hovsrch1.wav");
+	sound_search2 = gi.soundindex("hover/hovsrch2.wav");
+
+	gi.soundindex("hover/hovatck1.wav");
+
+	self->s.sound = gi.soundindex("hover/hovidle1.wav");
+
+	self->movetype = MOVETYPE_STEP;
+	self->solid = SOLID_BBOX;
+	self->s.modelindex = gi.modelindex("models/monsters/hover/tris.md2");
+	VectorSet(self->mins, -24, -24, -24);
+	VectorSet(self->maxs, 24, 24, 32);
+
+	self->health = 240;
+	self->gib_health = -100;
+	self->mass = 150;
+
+	self->pain = hover_pain;
+	self->die = hover_die;
+
+	self->monsterinfo.stand = hover_stand;
+	self->monsterinfo.walk = hover_walk;
+	self->monsterinfo.run = hover_run;
+	//	self->monsterinfo.dodge = hover_dodge;
+	self->monsterinfo.attack = hover_start_attack;
+	self->monsterinfo.sight = hover_sight;
+	self->monsterinfo.search = hover_search;
+	self->monsterinfo.aiflags |= AI_GOOD_GUY;
+
+	edict_t* player = NULL;
+	for (int i = 1; i <= maxclients->value; i++) {
+		edict_t* ent = &g_edicts[i];
+		if (ent->inuse && ent->client) {
+			player = ent;
+			break;
+		}
+	}
+
+	self->goalentity = player;
+
+	gi.linkentity(self);
+
+	self->monsterinfo.currentmove = &hover_move_stand;
+	self->monsterinfo.scale = MODEL_SCALE * 0.5;
+
+	flymonster_start(self);
+}

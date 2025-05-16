@@ -445,8 +445,6 @@ void monster_use (edict_t *self, edict_t *other, edict_t *activator)
 		return;
 	if (activator->flags & FL_NOTARGET)
 		return;
-	if (!(activator->client) && !(activator->monsterinfo.aiflags & AI_GOOD_GUY))
-		return;
 	
 // delay reaction so if the monster is teleported, its sound is still heard
 	self->enemy = activator;

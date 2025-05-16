@@ -412,14 +412,19 @@ qboolean FindTarget (edict_t *self)
 
 	if (self->monsterinfo.aiflags & AI_GOOD_GUY)
 	{
-		if (self->goalentity && self->goalentity->inuse && self->goalentity->classname)
-		{
-			if (strcmp(self->goalentity->classname, "target_actor") == 0)
-				return false;
+		edict_t* e;
+		for (int i = 1; i < globals.num_edicts; i++) {
+			e = &g_edicts[i];
+			if (!(e->inuse) || !(e->svflags & SVF_MONSTER))
+				continue;
+			if (e->monsterinfo.aiflags & AI_GOOD_GUY)
+				continue; // don't attack other friendly monsters
+			if (visible(self, e)) {
+				self->enemy = e;
+				FoundTarget(self);
+				return true;
+			}
 		}
-
-		//FIXME look for monsters?
-		return false;
 	}
 
 	// if we're going to a combat point, just proceed
@@ -609,6 +614,10 @@ qboolean M_CheckAttack (edict_t *self)
 	vec3_t	spot1, spot2;
 	float	chance;
 	trace_t	tr;
+
+	if (self->monsterinfo.aiflags & AI_GOOD_GUY) {
+		return false;
+	}
 
 	if (self->enemy->health > 0)
 	{

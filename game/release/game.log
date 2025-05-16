@@ -1,0 +1,60 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  g_cmds.c
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(34,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(57,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(58,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(722,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(725,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(808,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(809,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(810,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(821,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(828,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(875,7): warning C4459: declaration of 'st' hides global declaration
+      C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_local.h(456,21):
+      see declaration of 'st'
+  
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(897,3): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(885,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(893,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(925,3): warning C4013: 'SP_friendly_gunner' undefined; assuming extern returning int
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(959,3): warning C4013: 'SP_friendly_gladiator' undefined; assuming extern returning int
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(993,3): warning C4013: 'SP_friendly_hover' undefined; assuming extern returning int
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(1027,3): warning C4013: 'SP_friendly_flyer' undefined; assuming extern returning int
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\g_cmds.c(1061,3): warning C4013: 'SP_friendly_infantry' undefined; assuming extern returning int
+  m_flyer.c
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_flyer.c(52,43): warning C4100: 'other': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_flyer.c(531,65): warning C4100: 'damage': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_flyer.c(531,55): warning C4100: 'kick': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_flyer.c(531,42): warning C4100: 'other': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_flyer.c(564,89): warning C4100: 'point': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_flyer.c(564,74): warning C4100: 'damage': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_flyer.c(564,60): warning C4100: 'attacker': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_flyer.c(564,40): warning C4100: 'inflictor': unreferenced formal parameter
+  m_gladiator.c
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_gladiator.c(49,47): warning C4100: 'other': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_gladiator.c(240,69): warning C4100: 'damage': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_gladiator.c(240,59): warning C4100: 'kick': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_gladiator.c(240,46): warning C4100: 'other': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_gladiator.c(308,94): warning C4100: 'point': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_gladiator.c(308,65): warning C4100: 'attacker': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_gladiator.c(308,45): warning C4100: 'inflictor': unreferenced formal parameter
+  m_hover.c
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_hover.c(43,43): warning C4100: 'other': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_hover.c(487,55): warning C4100: 'kick': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_hover.c(487,42): warning C4100: 'other': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_hover.c(541,90): warning C4100: 'point': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_hover.c(541,61): warning C4100: 'attacker': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_hover.c(541,41): warning C4100: 'inflictor': unreferenced formal parameter
+  m_infantry.c
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_infantry.c(215,68): warning C4100: 'damage': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_infantry.c(215,58): warning C4100: 'kick': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_infantry.c(215,45): warning C4100: 'other': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_infantry.c(299,46): warning C4100: 'other': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_infantry.c(386,93): warning C4100: 'point': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_infantry.c(386,64): warning C4100: 'attacker': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_infantry.c(386,44): warning C4100: 'inflictor': unreferenced formal parameter
+C:\Users\Legion\Documents\School\GameModDevelopment\quake2-full\game\m_infantry.c(466,62): warning C4100: 'eta': unreferenced formal parameter
+  Generating Code...
+     Creating library .\..\release\gamex86.lib and object .\..\release\gamex86.exp
+  game.vcxproj -> C:\Users\Legion\Documents\School\GameModDevelopment\quake2-8.50\pets\gamex86.dll

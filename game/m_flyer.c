@@ -624,3 +624,71 @@ void SP_monster_flyer (edict_t *self)
 
 	flymonster_start (self);
 }
+
+void SP_friendly_flyer(edict_t* self)
+{
+	if (deathmatch->value)
+	{
+		G_FreeEdict(self);
+		return;
+	}
+
+	// fix a map bug in jail5.bsp
+	if (!Q_stricmp(level.mapname, "jail5") && (self->s.origin[2] == -104))
+	{
+		self->targetname = self->target;
+		self->target = NULL;
+	}
+
+	sound_sight = gi.soundindex("flyer/flysght1.wav");
+	sound_idle = gi.soundindex("flyer/flysrch1.wav");
+	sound_pain1 = gi.soundindex("flyer/flypain1.wav");
+	sound_pain2 = gi.soundindex("flyer/flypain2.wav");
+	sound_slash = gi.soundindex("flyer/flyatck2.wav");
+	sound_sproing = gi.soundindex("flyer/flyatck1.wav");
+	sound_die = gi.soundindex("flyer/flydeth1.wav");
+
+	gi.soundindex("flyer/flyatck3.wav");
+
+	self->s.modelindex = gi.modelindex("models/monsters/flyer/tris.md2");
+	VectorSet(self->mins, -16, -16, -24);
+	VectorSet(self->maxs, 16, 16, 32);
+	self->movetype = MOVETYPE_STEP;
+	self->solid = SOLID_BBOX;
+
+	self->s.sound = gi.soundindex("flyer/flyidle1.wav");
+
+	self->health = 50;
+	self->mass = 50;
+
+	self->pain = flyer_pain;
+	self->die = flyer_die;
+
+	self->monsterinfo.stand = flyer_stand;
+	self->monsterinfo.walk = flyer_walk;
+	self->monsterinfo.run = flyer_run;
+	self->monsterinfo.attack = flyer_attack;
+	self->monsterinfo.melee = flyer_melee;
+	self->monsterinfo.sight = flyer_sight;
+	self->monsterinfo.idle = flyer_idle;
+	self->monsterinfo.aiflags |= AI_GOOD_GUY;
+
+	edict_t* player = NULL;
+	for (int i = 1; i <= maxclients->value; i++) {
+		edict_t* ent = &g_edicts[i];
+		if (ent->inuse && ent->client) {
+			player = ent;
+			break;
+		}
+	}
+
+	self->goalentity = player;
+
+	gi.linkentity(self);
+
+	self->monsterinfo.currentmove = &flyer_move_stand;
+	self->monsterinfo.scale = MODEL_SCALE * 0.5;
+
+	flymonster_start(self);
+}
+

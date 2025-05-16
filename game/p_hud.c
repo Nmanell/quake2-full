@@ -302,16 +302,11 @@ Draw help computer.
 void HelpComputer (edict_t *ent)
 {
 	char	string[1024];
-	char	*sk;
+	char	*title;
+	char	*desc;
 
-	if (skill->value == 0)
-		sk = "easy";
-	else if (skill->value == 1)
-		sk = "medium";
-	else if (skill->value == 2)
-		sk = "hard";
-	else
-		sk = "hard+";
+	title = "Pets";
+	desc = "This is a mod where you can have pet monsters";
 
 	// send the layout
 	Com_sprintf (string, sizeof(string),
@@ -322,8 +317,8 @@ void HelpComputer (edict_t *ent)
 		"xv 0 yv 110 cstring2 \"%s\" "		// help 2
 		"xv 50 yv 164 string2 \" kills     goals    secrets\" "
 		"xv 50 yv 172 string2 \"%3i/%3i     %i/%i       %i/%i\" ", 
-		sk,
-		level.level_name,
+		title,
+		desc,
 		game.helpmessage1,
 		game.helpmessage2,
 		level.killed_monsters, level.total_monsters, 

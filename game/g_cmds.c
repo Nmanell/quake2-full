@@ -899,6 +899,175 @@ void Cmd_PlayerList_f(edict_t *ent)
 	gi.cprintf(ent, PRINT_HIGH, "%s", text);
 }
 
+/*
+=================
+Spawn Gunner
+=================
+*/
+void Cmd_SpawnGunner_f(edict_t *ent) {
+
+	if (!ent->client)
+		return;
+
+	vec3_t spawn_origin;
+	VectorCopy(ent->s.origin, spawn_origin);
+
+	vec3_t forward;
+	AngleVectors(ent->client->v_angle, forward, NULL, NULL);
+	VectorMA(spawn_origin, 64, forward, spawn_origin);
+	spawn_origin[2] += 16;
+
+	edict_t* gunner = G_Spawn();
+	VectorCopy(spawn_origin, gunner->s.origin);
+
+	if (!(gi.pointcontents(spawn_origin) & MASK_SOLID)) 
+	{
+		SP_friendly_gunner(gunner);
+		gi.bprintf(PRINT_HIGH, "Friendly gunner spawned.\n");
+	}
+	else
+	{
+		G_FreeEdict(gunner);
+		gi.cprintf(ent, PRINT_HIGH, "Cannot spawn gunner: blocked location.\n");
+	}
+
+}
+
+/*
+=================
+Spawn Gladiator
+=================
+*/
+void Cmd_SpawnGladiator_f(edict_t* ent) {
+
+	if (!ent->client)
+		return;
+
+	vec3_t spawn_origin;
+	VectorCopy(ent->s.origin, spawn_origin);
+
+	vec3_t forward;
+	AngleVectors(ent->client->v_angle, forward, NULL, NULL);
+	VectorMA(spawn_origin, 64, forward, spawn_origin);
+	spawn_origin[2] += 24;
+
+	edict_t* gladiator = G_Spawn();
+	VectorCopy(spawn_origin, gladiator->s.origin);
+
+	if (!(gi.pointcontents(spawn_origin) & MASK_SOLID))
+	{
+		SP_friendly_gladiator(gladiator);
+		gi.bprintf(PRINT_HIGH, "Friendly gunner spawned.\n");
+	}
+	else
+	{
+		G_FreeEdict(gladiator);
+		gi.cprintf(ent, PRINT_HIGH, "Cannot spawn gunner: blocked location.\n");
+	}
+
+}
+
+/*
+=================
+Spawn Hover
+=================
+*/
+void Cmd_SpawnHover_f(edict_t* ent) {
+
+	if (!ent->client)
+		return;
+
+	vec3_t spawn_origin;
+	VectorCopy(ent->s.origin, spawn_origin);
+
+	vec3_t forward;
+	AngleVectors(ent->client->v_angle, forward, NULL, NULL);
+	VectorMA(spawn_origin, 64, forward, spawn_origin);
+	spawn_origin[2] += 16;
+
+	edict_t* hover = G_Spawn();
+	VectorCopy(spawn_origin, hover->s.origin);
+
+	if (!(gi.pointcontents(spawn_origin) & MASK_SOLID))
+	{
+		SP_friendly_hover(hover);
+		gi.bprintf(PRINT_HIGH, "Friendly gunner spawned.\n");
+	}
+	else
+	{
+		G_FreeEdict(hover);
+		gi.cprintf(ent, PRINT_HIGH, "Cannot spawn gunner: blocked location.\n");
+	}
+
+}
+
+/*
+=================
+Spawn Flyer
+=================
+*/
+void Cmd_SpawnFlyer_f(edict_t* ent) {
+
+	if (!ent->client)
+		return;
+
+	vec3_t spawn_origin;
+	VectorCopy(ent->s.origin, spawn_origin);
+
+	vec3_t forward;
+	AngleVectors(ent->client->v_angle, forward, NULL, NULL);
+	VectorMA(spawn_origin, 64, forward, spawn_origin);
+	spawn_origin[2] += 24;
+
+	edict_t* flyer = G_Spawn();
+	VectorCopy(spawn_origin, flyer->s.origin);
+
+	if (!(gi.pointcontents(spawn_origin) & MASK_SOLID))
+	{
+		SP_friendly_flyer(flyer);
+		gi.bprintf(PRINT_HIGH, "Friendly gunner spawned.\n");
+	}
+	else
+	{
+		G_FreeEdict(flyer);
+		gi.cprintf(ent, PRINT_HIGH, "Cannot spawn gunner: blocked location.\n");
+	}
+
+}
+
+/*
+=================
+Spawn Infantry
+=================
+*/
+void Cmd_SpawnInfantry_f(edict_t* ent) {
+
+	if (!ent->client)
+		return;
+
+	vec3_t spawn_origin;
+	VectorCopy(ent->s.origin, spawn_origin);
+
+	vec3_t forward;
+	AngleVectors(ent->client->v_angle, forward, NULL, NULL);
+	VectorMA(spawn_origin, 64, forward, spawn_origin);
+	spawn_origin[2] += 24;
+
+	edict_t* infantry = G_Spawn();
+	VectorCopy(spawn_origin, infantry->s.origin);
+
+	if (!(gi.pointcontents(spawn_origin) & MASK_SOLID))
+	{
+		SP_friendly_infantry(infantry);
+		gi.bprintf(PRINT_HIGH, "Friendly gunner spawned.\n");
+	}
+	else
+	{
+		G_FreeEdict(infantry);
+		gi.cprintf(ent, PRINT_HIGH, "Cannot spawn gunner: blocked location.\n");
+	}
+
+}
 
 /*
 =================
@@ -943,50 +1112,60 @@ void ClientCommand (edict_t *ent)
 	if (level.intermissiontime)
 		return;
 
-	if (Q_stricmp (cmd, "use") == 0)
-		Cmd_Use_f (ent);
-	else if (Q_stricmp (cmd, "drop") == 0)
-		Cmd_Drop_f (ent);
-	else if (Q_stricmp (cmd, "give") == 0)
-		Cmd_Give_f (ent);
-	else if (Q_stricmp (cmd, "god") == 0)
-		Cmd_God_f (ent);
-	else if (Q_stricmp (cmd, "notarget") == 0)
-		Cmd_Notarget_f (ent);
-	else if (Q_stricmp (cmd, "noclip") == 0)
-		Cmd_Noclip_f (ent);
-	else if (Q_stricmp (cmd, "inven") == 0)
-		Cmd_Inven_f (ent);
-	else if (Q_stricmp (cmd, "invnext") == 0)
-		SelectNextItem (ent, -1);
-	else if (Q_stricmp (cmd, "invprev") == 0)
-		SelectPrevItem (ent, -1);
-	else if (Q_stricmp (cmd, "invnextw") == 0)
-		SelectNextItem (ent, IT_WEAPON);
-	else if (Q_stricmp (cmd, "invprevw") == 0)
-		SelectPrevItem (ent, IT_WEAPON);
-	else if (Q_stricmp (cmd, "invnextp") == 0)
-		SelectNextItem (ent, IT_POWERUP);
-	else if (Q_stricmp (cmd, "invprevp") == 0)
-		SelectPrevItem (ent, IT_POWERUP);
-	else if (Q_stricmp (cmd, "invuse") == 0)
-		Cmd_InvUse_f (ent);
-	else if (Q_stricmp (cmd, "invdrop") == 0)
-		Cmd_InvDrop_f (ent);
-	else if (Q_stricmp (cmd, "weapprev") == 0)
-		Cmd_WeapPrev_f (ent);
-	else if (Q_stricmp (cmd, "weapnext") == 0)
-		Cmd_WeapNext_f (ent);
-	else if (Q_stricmp (cmd, "weaplast") == 0)
-		Cmd_WeapLast_f (ent);
-	else if (Q_stricmp (cmd, "kill") == 0)
-		Cmd_Kill_f (ent);
-	else if (Q_stricmp (cmd, "putaway") == 0)
-		Cmd_PutAway_f (ent);
-	else if (Q_stricmp (cmd, "wave") == 0)
-		Cmd_Wave_f (ent);
+	if (Q_stricmp(cmd, "use") == 0)
+		Cmd_Use_f(ent);
+	else if (Q_stricmp(cmd, "drop") == 0)
+		Cmd_Drop_f(ent);
+	else if (Q_stricmp(cmd, "give") == 0)
+		Cmd_Give_f(ent);
+	else if (Q_stricmp(cmd, "god") == 0)
+		Cmd_God_f(ent);
+	else if (Q_stricmp(cmd, "notarget") == 0)
+		Cmd_Notarget_f(ent);
+	else if (Q_stricmp(cmd, "noclip") == 0)
+		Cmd_Noclip_f(ent);
+	else if (Q_stricmp(cmd, "inven") == 0)
+		Cmd_Inven_f(ent);
+	else if (Q_stricmp(cmd, "invnext") == 0)
+		SelectNextItem(ent, -1);
+	else if (Q_stricmp(cmd, "invprev") == 0)
+		SelectPrevItem(ent, -1);
+	else if (Q_stricmp(cmd, "invnextw") == 0)
+		SelectNextItem(ent, IT_WEAPON);
+	else if (Q_stricmp(cmd, "invprevw") == 0)
+		SelectPrevItem(ent, IT_WEAPON);
+	else if (Q_stricmp(cmd, "invnextp") == 0)
+		SelectNextItem(ent, IT_POWERUP);
+	else if (Q_stricmp(cmd, "invprevp") == 0)
+		SelectPrevItem(ent, IT_POWERUP);
+	else if (Q_stricmp(cmd, "invuse") == 0)
+		Cmd_InvUse_f(ent);
+	else if (Q_stricmp(cmd, "invdrop") == 0)
+		Cmd_InvDrop_f(ent);
+	else if (Q_stricmp(cmd, "weapprev") == 0)
+		Cmd_WeapPrev_f(ent);
+	else if (Q_stricmp(cmd, "weapnext") == 0)
+		Cmd_WeapNext_f(ent);
+	else if (Q_stricmp(cmd, "weaplast") == 0)
+		Cmd_WeapLast_f(ent);
+	else if (Q_stricmp(cmd, "kill") == 0)
+		Cmd_Kill_f(ent);
+	else if (Q_stricmp(cmd, "putaway") == 0)
+		Cmd_PutAway_f(ent);
+	else if (Q_stricmp(cmd, "wave") == 0)
+		Cmd_Wave_f(ent);
 	else if (Q_stricmp(cmd, "playerlist") == 0)
 		Cmd_PlayerList_f(ent);
+	else if (Q_stricmp(cmd, "spawn_gunner") == 0)
+		Cmd_SpawnGunner_f(ent);
+	else if (Q_stricmp(cmd, "spawn_gladiator") == 0)
+		Cmd_SpawnGladiator_f(ent);
+	else if (Q_stricmp(cmd, "spawn_flyer") == 0)
+		Cmd_SpawnFlyer_f(ent);
+	else if (Q_stricmp(cmd, "spawn_hover") == 0)
+		Cmd_SpawnHover_f(ent);
+	else if (Q_stricmp(cmd, "spawn_Infantry") == 0)
+		Cmd_SpawnInfantry_f(ent);
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }
